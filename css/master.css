@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "FigTree";
+  src: url(../fonts/Figtree-Variable.ttf);
+}
+:root {
+  --Yellow: hsl(47, 88%, 63%);
+  --White: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 50%);
+  --Black: hsl(0, 0%, 7%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "FigTree";
+  font-size: 16px;
+}
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Yellow);
+}
+.card {
+  background-color: var(--White);
+  width: 310px;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid var(--Black);
+  box-shadow: 5px 5px 0 var(--Black);
+  transition: box-shadow .3s;
+}
+.card:hover{
+    box-shadow: 8px 8px 0 var(--Black);
+}
+.card .image {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.card .image img {
+  max-width: 100%;
+  display: block;
+}
+.card .content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 15px;
+}
+.card .content > h2 {
+  font-size: 12px;
+  font-weight: 700;
+  background-color: var(--Yellow);
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.card .content p {
+  font-weight: 400;
+  font-size: 11px;
+}
+.card .content h1 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color .3s;
+}
+.card .content h1:hover{
+  color: var(--Yellow);
+}
+
+.card .content p:last-of-type {
+  line-height: 1.4;
+  font-size: 13px;
+  color: var(--Grey);
+}
+.card .content .author {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.card .content .author img {
+  width: 25px;
+  margin-right: 10px;
+}
+.card .content .author h2 {
+  font-size: 12px;
+  font-weight: 700;
+}
